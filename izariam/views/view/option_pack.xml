@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+  <id>Option pack for opencart</id>
+  <version>1.0</version>
+  <vqmver>2.X</vqmver>
+  <author>Engineer/ABM</author>
+	<file name="system/library/cart.php">
+	 <operation>
+      <search position="replace"><![CDATA[if ($option_query->row['type'] == 'select' ||]]></search>
+      <add><![CDATA[if ($option_query->row['type'] == 'select' || $option_query->row['type'] == 'button' || $option_query->row['type'] == 'name' ||]]></add>
+    </operation>
+	</file>
+	
+	<file name="catalog/controller/checkout/cart.php">
+	 <operation>
+      <search position="after"><![CDATA[public function add() {]]></search>
+      <add><![CDATA[
+      $option_pack_option = array();
+      if(isset($this->request->post['button_option'])) {
+        foreach($this->request->post['button_option'] as $product_option_id => $values) {
+          $option_pack_option[$product_option_id] = array_filter($values);
+        }
+      $option_pack_option = array_filter($option_pack_option);
+      }]]></add>
+   </operation>
+	 <operation>
+      <search position="replace"><![CDATA[if ($product_option['required'] && empty($option[$product_option['product_option_id']])) {]]></search>
+      <add><![CDATA[
+        if ($product_option['required'] && empty($option[$product_option['product_option_id']])  &&  empty($option_pack_option[$product_option['product_option_id']])) {
+      ]]></add>
+   </operation>
+	 <operation>
+      <search position="replace"><![CDATA[  $this->cart->add($this->request->post['product_id'], $quantity, $option, $profile_id);]]></search>
+      <add><![CDATA[
+			if (empty($option_pack_option)) {
+        $this->cart->add($this->request->post['product_id'], $quantity, $option, $profile_id);
+			} else {
+        $quantity = 0;
+        foreach($option_pack_option as $product_option_id => $pack_option) {
+          foreach($pack_option as $product_option_value_id =>$qty){
+            $this->cart->add($this->request->post['product_id'], $qty, $option + array($product_option_id => $product_option_value_id,));
+            $quantity += $qty;   
+          }
+        }
+      }]]></add>
+   </operation>
+	</file>
+
+  <file name="catalog/controller/product/category.php">
+    <operation info="add option pack data">
+      <search position="before"><![CDATA[$this->data['products'] = array();]]></search>
+      <add><![CDATA[
+ 		  $this->document->addScript('catalog/view/javascript/option_pack.js');      
+      $this->load->model('setting/setting');
+      $this->data['option_pack'] = $this->model_setting_setting->getSetting('option_pack');
+      $this->load->model('module/option_pack');
+      ]]></add>
+    </operation>
+  
+    <operation info="add option processing(get)">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+      $product_options = $this->model_module_option_pack->getOptionArray($this->model_catalog_product->getProductOptions($result['product_id']),$result);
+      ]]></add>
+    </operation>
+    <operation info="add option processing(pass)">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+                'options'   => $product_options,
+      ]]></add>
+    </operation>
+  </file>
+  
+  <file name="catalog/controller/product/special.php">
+    <operation info="add option pack data">
+      <search position="before"><![CDATA[$this->data['products'] = array();]]></search>
+      <add><![CDATA[
+      $this->load->model('setting/setting');
+      $this->data['option_pack'] = $this->model_setting_setting->getSetting('option_pack');
+      $this->load->model('module/option_pack');
+      ]]></add>
+    </operation>
+  
+    <operation info="add option processing(get)">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+      $product_options = $this->model_module_option_pack->getOptionArray($this->model_catalog_product->getProductOptions($result['product_id']),$result);
+      ]]></add>
+    </operation>
+    <operation info="add option processing(pass)">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+                'options'   => $product_options,
+      ]]></add>
+    </operation>
+  </file>
+  
+  <file name="catalog/controller/product/search.php">
+    <operation info="add option pack data">
+      <search position="before"><![CDATA[$this->data['products'] = array();]]></search>
+      <add><![CDATA[
+      $this->load->model('setting/setting');
+      $this->data['option_pack'] = $this->model_setting_setting->getSetting('option_pack');
+      $this->load->model('module/option_pack');
+      ]]></add>
+    </operation>
+  
+    <operation info="add option processing(get)">
+      <search position="before"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+      $product_options = $this->model_module_option_pack->getOptionArray($this->model_catalog_product->getProductOptions($result['product_id']),$result);
+      ]]></add>
+    </operation>
+    <operation info="add option processing(pass)">
+      <search position="after"><![CDATA[$this->data['products'][] = array(]]></search>
+      <add><![CDATA[
+                'options'   => $product_options,
+      ]]></add>
+    </operation>
+  </file>
+  
+  
+  <file name="catalog/view/theme/*/template/product/category.tpl">
+    <operation info="inject option output">
+      <search position="before"><![CDATA[<div class="wishlist"><a onclick="addToWishList]]></search>
+      <add><![CDATA[
+<?php require(DIR_TEMPLATE . 'default/template/module/option_pack_category.tpl'); ?>
+      ]]></add>
+    </operation>    
+    <operation info="inject option output js">
+      <search position="before"><![CDATA[html += '  <div class="wishlist">']]></search>
+      <add><![CDATA[
+      var options = $(element).find('.options').html();
+			if (options != null) {      
+			 html += ' <div class="options">' + options + '</div>';
+			}      ]]></add>
+    </operation>
+    <operation info="inject option output js 2">
+      <search position="before"><![CDATA[html += '<div class="wishlist">']]></search>
+      <add><![CDATA[
+      var options = $(element).find('.options').html();
+			if (options != null) {      
+			 html += ' <div class="options">' + options + '</div>';
+			}      ]]></add>
+    </operation>
+        
+  </file>
+  
+  <file name="catalog/view/theme/*/template/product/special.tpl">
+    <operation info="inject option output">
+      <search position="before"><![CDATA[<div class="wishlist"><a onclick="addToWishList]]></search>
+      <add><![CDATA[
+<?php require(DIR_TEMPLATE . 'default/template/module/option_pack_special.tpl'); ?>
+      ]]></add>
+    </operation>    
+    <operation info="inject option output js">
+      <search position="before"><![CDATA[html += '  <div class="wishlist">']]></search>
+      <add><![CDATA[
+      var options = $(element).find('.options').html();
+			if (options != null) {      
+			 html += ' <div class="options">' + options + '</div>';
+			}      ]]></add>
+    </operation>
+    <operation info="inject option output js 2">
+      <search position="before"><![CDATA[html += '<div class="wishlist">']]></search>
+      <add><![CDATA[
+      var options = $(element).find('.options').html();
+			if (options != null) {      
+			 html += ' <div class="options">' + options + '</div>';
+			}      ]]></add>
+    </operation>
+        
+  </file>
+  
+    <file name="catalog/view/theme/*/template/product/search.tpl">
+    <operation info="inject option output">
+      <search position="before"><![CDATA[<div class="wishlist"><a onclick="addToWishList]]></search>
+      <add><![CDATA[
+<?php require(DIR_TEMPLATE . 'default/template/module/option_pack_search.tpl'); ?>
+      ]]></add>
+    </operation>    
+    <operation info="inject option output js">
+      <search position="before"><![CDATA[html += '  <div class="wishlist">']]></search>
+      <add><![CDATA[
+      var options = $(element).find('.options').html();
+			if (options != null) {      
+			 html += ' <div class="options">' + options + '</div>';
+			}      ]]></add>
+    </operation>
+    <operation info="inject option output js 2">
+      <search position="before"><![CDATA[html += '<div class="wishlist">']]></search>
+      <add><![CDATA[
+      var options = $(element).find('.options').html();
+			if (options != null) {      
+			 html += ' <div class="options">' + options + '</div>';
+			}      ]]></add>
+    </operation>
+        
+  </file>
+  
+  <file name="catalog/view/javascript/common.js">
+    <operation>
+      <search position="before"><![CDATA[function addToCart(product_id, quantity) {]]></search>
+      <add><![CDATA[
+function add2Cart(product_id) {
+  var cart_data = $('#form-'+product_id).serialize();
+  $.ajax({
+    url: 'index.php?route=checkout/cart/add',
+    type: 'post',
+    data: cart_data,
+    dataType: 'json',
+    success: function(json) {
+      $('.success, .warning, .attention, .information, .error').remove();
+      if (json['redirect']) {
+      location = json['redirect'];
+      }
+      if (json['success']) {
+      $('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/*/image/close.png" alt="" class="close" /></div>');
+      $('.success').fadeIn('slow');
+      setTimeout(function() {
+      $('.success').delay(500).fadeOut(1000);
+      }, 7000);
+      $('#cart-total').html(json['total']);
+      }
+    }
+  }); 
+}      
+      ]]></add>
+    </operation>
+  </file>
+	
+  <file name="catalog/model/catalog/product.php">
+		<operation>
+            <search position="replace"><![CDATA[if ($product_option['type'] == 'select' ||]]></search>
+            <add><![CDATA[if ($product_option['type'] == 'select' || $product_option['type'] == 'button' || $product_option['type'] == 'name' || ]]></add>
+        </operation>
+	</file>
+	
+  <file name="catalog/controller/product/product.php">
+		<operation>
+		  <search position="after"><![CDATA[$this->load->model('catalog/category');]]></search>
+		  <add><![CDATA[
+ 		  $this->document->addScript('catalog/view/javascript/option_pack.js');      
+$this->load->model('setting/setting');
+      $this->data['option_pack'] = $this->model_setting_setting->getSetting('option_pack');
+      $this->load->model('module/option_pack');
+       ]]></add>
+		</operation>
+		<operation>
+		  <search position="replace" offset="43"><![CDATA[$this->data['options'] = array();]]></search>
+		  <add><![CDATA[
+      $this->data['options'] = $this->model_module_option_pack->getOptionArray($this->model_catalog_product->getProductOptions($product_info['product_id']),$product_info);		  
+      ]]></add>
+		</operation>
+	</file>	
+	
+  <file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation>
+            <search position="replace" offset="21"><![CDATA[<?php if ($option['type'] == 'image') { ?>]]></search>
+            <add><![CDATA[
+            <?php require(DIR_TEMPLATE . 'default/template/module/option_pack_product.tpl'); ?>
+ ]]></add>
+        </operation>
+	</file>	
+
+  
+  <file name="admin/controller/catalog/option.php">
+	
+  	<operation>
+      <search position="before"><![CDATA[$this->data['text_select']]]></search>
+      <add><![CDATA[
+        $this->data['text_name'] = $this->language->get('text_name');
+        $this->data['text_button'] = $this->language->get('text_button');
+        $this->data['text_nameimage'] = $this->language->get('text_nameimage');        
+    ]]></add>
+    </operation>
+  
+    <operation>
+      <ignoreif><![CDATA[$option['type'] == 'name']]></ignoreif>
+      <search position="replace"><![CDATA[if ($option['type'] == 'select' ||]]></search>
+      <add><![CDATA[if ($option['type'] == 'select' || $option['type'] == 'name' || $option['type'] == 'button' || ]]></add>
+    </operation>
+    
+    <operation>
+      <ignoreif><![CDATA[$this->request->post['type'] == 'name']]></ignoreif>
+      <search position="replace"><![CDATA[if (($this->request->post['type'] == 'select' || ]]></search>
+      <add><![CDATA[if (($this->request->post['type'] == 'select' || $this->request->post['type'] == 'name' || $this->request->post['type'] == 'button' || ]]></add>
+     </operation>     
+  </file> 
+	
+  <file name="admin/view/template/catalog/option_form.tpl">
+		<operation>
+  		<ignoreif><![CDATA[if ($type == 'name')]]></ignoreif>
+      <search position="before"><![CDATA[<optgroup label="<?php echo $text_choose; ?>">]]></search>
+      <add><![CDATA[	<optgroup label="<?php echo $text_button; ?>">			
+      <!-- <?php if ($type == 'button') { ?>
+  <option value="button" selected><?php echo $text_button; ?></option>
+  <?php } else { ?>
+  <option value="button"><?php echo $text_button; ?></option>
+  <?php } ?> 
+        <?php if ($type == 'name') { ?>
+  <option value="name" selected><?php echo $text_name; ?></option>
+  <?php } else { ?>
+  <option value="name"><?php echo $text_name; ?></option>
+  <?php } ?> -->
+  <?php if ($type == 'image') { ?>
+                <option value="image" selected><?php echo $text_nameimage; ?></option>
+                <?php } else { ?>
+                <option value="image"><?php echo $text_nameimage; ?></option>
+                <?php } ?>
+  </optgroup>
+              ]]></add>
+    </operation>
+
+		<operation>
+            <search position="replace"><![CDATA[if (this.value == 'select' ||]]></search>
+            <add><![CDATA[if (this.value == 'select' || this.value == 'button' || this.value == 'name' ||]]></add>
+        </operation>
+	</file>
+	
+  <file name="admin/language/*/catalog/option.php">
+		<operation>
+      <ignoreif><![CDATA[$_['text_name']]]></ignoreif>
+      <search position="after"><![CDATA[// Text]]></search>
+      <add><![CDATA[
+  $_['text_name']        = 'Name';
+  $_['text_button']         = 'Option pack';
+  $_['text_nameimage']        = 'Option+';
+  ]]></add>
+     </operation>
+	</file>
+	
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+      <search position="after"><![CDATA[$this->data['text_amount'] = $this->language->get('text_amount');]]></search>
+      <add><![CDATA[$this->data['text_button'] = $this->language->get('text_button');
+      $this->data['text_name'] = $this->language->get('text_name');
+      ]]></add>
+    </operation>
+
+		<operation>
+      <search position="replace"><![CDATA[if ($product_option['type'] == 'select' ||]]></search>
+      <add><![CDATA[if ($product_option['type'] == 'select' || $product_option['type'] == 'name' || $product_option['type'] == 'button' || ]]></add>
+     </operation>
+	</file>	
+
+	<file name="admin/model/catalog/product.php">
+		<operation>
+            <search position="replace"><![CDATA[if ($product_option['type'] == 'select' ||]]></search>
+            <add><![CDATA[if ($product_option['type'] == 'select' || $product_option['type'] == 'name' || $product_option['type'] == 'button' || ]]></add>
+        </operation>
+
+		<operation>
+            <search position="after"><![CDATA[foreach ($product_option['product_option_value'] as $product_option_value) {]]></search>
+            <add><![CDATA[
+							if(strlen($product_option_value['price']) > 0 && $product_option_value['price'][0] == '=') {
+								$option_price = (float)$data['price'] - (float)substr($product_option_value['price'], 1);
+								if($option_price < 0) {
+									$product_option_value['price'] = -$option_price;
+									$product_option_value['price_prefix'] = "+";
+								} else {
+									$product_option_value['price_prefix'] = "-";
+								}
+							}
+
+                    ]]></add>
+        </operation>
+	</file>
+
+  <file name="admin/view/template/catalog/product_form.tpl">
+		<operation>
+      <ignoreif><![CDATA[$product_option['type'] == 'name' ||]]></ignoreif>
+      <search position="replace"><![CDATA[<?php if ($product_option['type'] == 'select' ||]]></search>
+      <add><![CDATA[<?php if ($product_option['type'] == 'select' || $product_option['type'] == 'name' || $product_option['type'] == 'button' ||]]></add>
+    </operation>
+
+		<operation>
+      <search position="replace"><![CDATA[if (ui.item.type == 'select' ||]]></search>
+      <add><![CDATA[if (ui.item.type == 'select' || ui.item.type == 'name' || ui.item.type == 'button' ||]]></add>
+     </operation>
+	</file>	
+       
+</modification>
