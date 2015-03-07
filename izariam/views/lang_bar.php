@@ -135,13 +135,14 @@ function langList($lang = 'english', $userdata, $item, $item2){
 			        <!-- Section: Featured Game -->
 			        <h5>Featured New</h5>
 			        <ul>
-			            <li>We are developing new version (iZariam v0.1.0) and we will release soon.</li>
+			            <li>We have translated further into english and posted the latest source code on GitHub, we welcome contributions.</li>
 			        </ul>
 			        <!-- Section: Client Games -->
 			        <h5>Credits</h5>
 			        <ul>
-			            <li><a href="mailto:zzjhons@gmail.com?subject=iZariam-bar" title="zzjhons@gmail.com">ZZJHONS</a></li>
-			            <li>Haku</li>
+			            <li><a href="mailto:izariam@onapi.co.za?subject=iZariam-bar" title="izariam@onapi.co.za">Kevern</a></li>
+                  <li>ZZJOHNS</li>
+                  <li>Haku</li>
 			            <li>Nexus (ex-developer)</li>
 			            <li>Advocaite (ex-developer)</li>
 			            <li>Dzoki (ex-developer)</li>
@@ -149,10 +150,10 @@ function langList($lang = 'english', $userdata, $item, $item2){
 			        <!-- Section: Browser Games -->
 			        <h5>Links</h5>
 			        <ul>
-			            <li><a href="http://izariam.spazze.net">Beta Server</a></li>
-			            <li><a href="http://forum.spazze.net">Develop Forum</a></li>
-			            <li><a href="https://github.com/ZZJHONS/IZARIAM">GitHub Repo</a></li>
-			            <li><a href="http://zzjhons.com">ZZJHONS</a></li>
+			            <li><a href="http://izariam.onapi.co.za">Beta Server</a></li>
+			            <li><a href="http://forum.onapi.co.za">Develop Forum</a></li>
+			            <li><a href="https://github.com/Kevvo7312/IZARIAM">GitHub Repo</a></li>
+			            
 			        </ul>
 			    </div>
 			</div>

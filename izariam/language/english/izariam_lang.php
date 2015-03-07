@@ -1,9 +1,9 @@
 <?php
 /*
  * Project: iZariam
- * Edited: 26/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * Edited: 07/03/2015 by Kevern
+ * By: Kevern
+ * Info: admin@onapi.co.za
  */
 
 // UTF-8 lang
@@ -1281,7 +1281,7 @@ $lang['cargo_space'] = 'Cargo space';
 $lang['holds_empty'] = 'Holds are empty';
 $lang['characters'] = 'Characters'; 
 $lang['ok'] = 'Ok'; 
-$lang['copy_right'] = '© 2012 iZariam - ZZJHONS';
+$lang['copy_right'] = '© 2015 iZariam - Kevern';
 
 // Welcome LANG
 $lang['head_description'] = 'iZariam is a free browser game. The player`s challenge is to lead a people through the ancient world. To build towns, trade and conquer islands.';
@@ -1327,7 +1327,7 @@ $lang['register_email_text_6'] = 'We wish you a lot of fun in the world of iZari
 $lang['register_email_text_7'] = 'Your iZariam Team.';
 $lang['password_email_text_1'] = 'Your new password for iZariam';
 $lang['password_email_text_2'] = 'You can enter on page';
-$lang['register_email_from'] = 'ZZJHONS';
+$lang['register_email_from'] = 'iZariam Game';
 
 $lang['next'] = 'Continue';
 $lang['back'] = 'Back';

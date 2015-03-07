@@ -20,9 +20,9 @@ $active_record = TRUE;
 |	['database'] The name of the database you want to connect.
 */
 $db['default']['hostname'] = "localhost";
-$db['default']['username'] = "username";
-$db['default']['password'] = "password";
-$db['default']['database'] = "database";
+$db['default']['username'] = "game-system";
+$db['default']['password'] = "uhezyvaza";
+$db['default']['database'] = "pi_izariam-db";
 /*
 |--------------------------------------------------------------------------
 | STOP! You must not edit below this text

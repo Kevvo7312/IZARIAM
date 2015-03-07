@@ -38,15 +38,15 @@
             </div>
             <br>
         </div>
-        <div id="footer">Powered by <a href="http://browserworld.zzjhons.com">iZariam</a></div>
-        <div id="footer2">ZZJHONS © 2012</div>
+        <div id="footer">Powered by <a href="http://onapi.co.za">iZariam</a></div>
+        <div id="footer2">Kevern © 2015</div>
     </div>
     <div id="fuzz">
         <div class="loadbox">
             <img src="<?=$this->config->item('style_url')?>img/ajax-loader.gif">
         </div>
     </div>
-    <iframe src="http://rotador.zzjhons.com/adsense/index.php" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
+    <iframe src="" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
     <?=$this->config->item('analytics')?>
     </body>
 </html>

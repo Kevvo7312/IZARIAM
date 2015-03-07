@@ -904,20 +904,20 @@
     <div id="footer-wrapper">
         <div id="footer">
             <div id="footer-inner">
-                <a class="logo" href="http://izariam.zzjhons.com/" target="_blank">
-                    <!-- <img src="http://en.ikariam.com/./img/gf-logo.png"  width="151" height="32" alt="Gameforge AG" id="gflogo" />-->
+                <a class="logo" href="http://onabox.co.za/" target="_blank">
+                    <img src="http://izariam.onapi.co.za/design/img/oab-logo.png"  width="151" height="72" alt="Onapi GPL" id="gflogo" />
                 </a>
                 <div id="footer-menu" class="clearfix">
                     <ul class="clearfix">
-                        <li><a href="http://izariam.zzjhons.com" target="_blank">iZariam</a></li>
+                        <li><a href="http://izariam.onapi.co.za" target="_blank">iZariam</a></li>
                         <li>|</li>
-                        <li><a href="http://ikariam.zzjhons.com" target="_blank">Forum</a></li>
+                        <li><a href="http://forum.onapi.co.za" target="_blank">Forum</a></li>
                         <li>|</li>
-                        <li><a href="https://github.com/ZZJHONS/IZARIAM" target="_blank">GitHub</a></li>
+                        <li><a href="https://github.com/Kevvo7312/IZARIAM" target="_blank">GitHub</a></li>
                         <li>|</li>
-                        <li><a href="mailto:zzjhons@gmail.com?subject=iZariam-Contact" target="_blank">Contact</a></li>
+                        <li><a href="mailto:admin@onapi.co.za?subject=iZariam-Contact" target="_blank">Contact</a></li>
                     </ul>
-                    <p class="copyright">ZZJHONS &copy; 2012 - <a href="http://ikariam.zzjhons.com">iZariam</a></p>
+                    <p class="copyright">Kevern &copy; 2015 - <a href="http://izariam.onapi.co.za">iZariam</a></p>
                 </div>
             </div>
         </div>
@@ -972,7 +972,7 @@
             }
         }
     </script>
-    <iframe src="http://rotador.zzjhons.com/adsense/index.php" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
+    <iframe src="" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
     <?=$this->config->item('analytics')?>
 </body>
 </html>
