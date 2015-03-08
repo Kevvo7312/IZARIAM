@@ -400,7 +400,7 @@
 			    </form>
 			</div>
 			<div id="facebook_button">
-				<a href="https://www.facebook.com/pages/iZariam/103717776418472" alt="iZariam Facebook"
+				<a href="" alt="iZariam Facebook"
           title="iZariam Facebook"></a>
 			</div>
 			<div id="globalResources">
@@ -651,9 +651,9 @@
 				});
 			</script>
 			<div id="footer">
-				<span class="copyright">© <a id="gflink" target="_blank" href="http://izariam.zzjhons.com" class="">iZariam</a> 2012 by <a id="gflink" target="_blank" href="http://zzjhons.com" class="">ZZJHONS</a><a href="<?=$this->config->item('base_url')?>game/credits/" style="margin:0px;" class="">.</a> All rights reserved.</span>
-				<a target="_blank" href="http://ikariam.zzjhons.com" title="Development Forum" class="">Development Forum</a>
-				<a target="_blank" href="https://github.com/ZZJHONS/IZARIAM" title="GitHub repo" class="">GitHub repo</a>
+				<span class="copyright">© <a id="gflink" target="_blank" href="http://izariam.onapi.co.za" class="">iZariam</a> 2012 by <a id="gflink" target="_blank" href="http://www.onabox.co.za" class="">OnABox</a><a href="<?=$this->config->item('base_url')?>game/credits/" style="margin:0px;" class="">.</a> All rights reserved.</span>
+				<a target="_blank" href="http://forum.onapi.co.za/categories/izariam" title="Development Forum" class="">Development Forum</a>
+				<a target="_blank" href="https://github.com/Kevvo7312/IZARIAM" title="GitHub repo" class="">GitHub repo</a>
 			</div>
 			<div id="conExtraDiv1"><span></span></div>
 			<div id="conExtraDiv2"><span></span></div>
@@ -692,7 +692,7 @@
                 </a>
             </li>
             <li class="forum">
-                <a href="http://ikariam.zzjhons.com" title="<?=$this->lang->line('board')?>" target="_blank">
+                <a href="http://izariam.onapi.co.za" title="<?=$this->lang->line('board')?>" target="_blank">
                     <span class="textLabel"><?=$this->lang->line('board')?></span>
                 </a>
             </li>
@@ -1150,7 +1150,7 @@
 		closePopupMessage('popupMessage_happyHourPopup');
 	</script>
 	<?}?>
-	<iframe src="http://rotador.zzjhons.com/adsense/index.php" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
+	<iframe src="" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
 	<?=$this->config->item('analytics')?>
 </body>
 </html>

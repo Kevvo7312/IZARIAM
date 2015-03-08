@@ -12,7 +12,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="<?=$this->lang->line('content')?>">
-    <meta name="author" content="ZZJHONS">
+    <meta name="author" content="Kevern">
     <meta name="Description" content="<?=$this->lang->line('head_description')?>">
     <script type="text/javascript" src="<?=$this->config->item('script_url')?>js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="<?=$this->config->item('script_url')?>js/jquery.tools.min.js"></script>
@@ -911,13 +911,13 @@
                     <ul class="clearfix">
                         <li><a href="http://izariam.onapi.co.za" target="_blank">iZariam</a></li>
                         <li>|</li>
-                        <li><a href="http://forum.onapi.co.za" target="_blank">Forum</a></li>
+                        <li><a href="http://forum.onapi.co.za/categories/izariam" target="_blank">Forum</a></li>
                         <li>|</li>
                         <li><a href="https://github.com/Kevvo7312/IZARIAM" target="_blank">GitHub</a></li>
                         <li>|</li>
-                        <li><a href="mailto:admin@onapi.co.za?subject=iZariam-Contact" target="_blank">Contact</a></li>
+                        <li><a href="mailto:izariam@onapi.co.za?subject=iZariam-Contact" target="_blank">Contact</a></li>
                     </ul>
-                    <p class="copyright">Kevern &copy; 2015 - <a href="http://izariam.onapi.co.za">iZariam</a></p>
+                    <p class="copyright">OnABox &copy; 2015 - <a href="http://www.onabox.co.za">iZariam</a></p>
                 </div>
             </div>
         </div>

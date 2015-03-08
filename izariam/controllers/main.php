@@ -2,9 +2,9 @@
 /*
  * Project: iZariam
  * File: izariam/controllers/main.php
- * Edited: 10/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * Edited: 08/03/2015
+ * By: Kevern
+ * Info: izariam@onapi.co.za
  */
 class Main extends Controller {
     function Main() {
@@ -174,7 +174,7 @@ class Main extends Controller {
                                         <br>'.$this->lang->line('register_email_text_7').'</p>
                                     </body>
                                 </html>';
-                            $this->email->from($this->config->item('email_from'), 'ZZJHONS');
+                            $this->email->from($this->config->item('email_from'), 'iZariam Game');
                             $this->email->to($_POST['email']);
                             $this->email->subject($user->login.', '.$this->lang->line('register_email_title'));
                             $this->email->message($message);
@@ -237,7 +237,7 @@ class Main extends Controller {
                             <br>'.$this->lang->line('register_email_text_6').',<br>'.$this->lang->line('register_email_text_7').'</p>
                         </body>
                     </html>';
-                $this->email->from($this->config->item('email_from'), 'ZZJHONS');
+                $this->email->from($this->config->item('email_from'), 'iZariam Game');
                 $this->email->to($_POST['email']);
                 $this->email->subject($this->lang->line('password_email_text_1').'!');
                 $this->email->message($message);

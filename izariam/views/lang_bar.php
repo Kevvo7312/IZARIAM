@@ -140,9 +140,9 @@ function langList($lang = 'english', $userdata, $item, $item2){
 			        <!-- Section: Client Games -->
 			        <h5>Credits</h5>
 			        <ul>
-			            <li><a href="mailto:izariam@onapi.co.za?subject=iZariam-bar" title="izariam@onapi.co.za">Kevern</a></li>
-                  <li>ZZJOHNS</li>
-                  <li>Haku</li>
+			            <li><a href="mailto:izariam@onapi.co.za?subject=iZariam-bar" title="izariam@onapi.co.za">OnABox</a></li>
+                  <li>ZZJOHNS (ex-developer)</li>
+                  <li>Haku (ex-developer)</li>
 			            <li>Nexus (ex-developer)</li>
 			            <li>Advocaite (ex-developer)</li>
 			            <li>Dzoki (ex-developer)</li>
@@ -151,7 +151,7 @@ function langList($lang = 'english', $userdata, $item, $item2){
 			        <h5>Links</h5>
 			        <ul>
 			            <li><a href="http://izariam.onapi.co.za">Beta Server</a></li>
-			            <li><a href="http://forum.onapi.co.za">Develop Forum</a></li>
+			            <li><a href="http://forum.onapi.co.za/categories/izariam">Develop Forum</a></li>
 			            <li><a href="https://github.com/Kevvo7312/IZARIAM">GitHub Repo</a></li>
 			            
 			        </ul>

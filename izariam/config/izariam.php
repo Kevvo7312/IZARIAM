@@ -2,9 +2,9 @@
 /*
  * Project: iZariam
  * File: izariam/config/izariam.php & install/include/izariam.php & install/include/izariam.tpl
- * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * Edited: 08/03/2105
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 /*
  * Game name
@@ -62,7 +62,7 @@ $config['style_url'] = 'http://izariam.onapi.co.za/design/';   // URL - skin
 $config['style_version'] = $config['working_version'];  // Skin version
 $config['script_url'] = 'http://izariam.onapi.co.za/design/';  // URL - scripts
 $config['script_version'] = $config['working_version']; // Scripts version
-$config['forum_url'] = 'http://forum.spazze.net';    // URL - forum
+$config['forum_url'] = 'http://forum.onapi.co.za/categories/izariam';    // URL - forum
 
 /*
  * Designs
@@ -77,7 +77,7 @@ $config['design_4'] = TRUE;                          // 0.4.5 design
  * Mail config
  */
 $config['game_email'] = true;                       // To resolve sending of letters (Adjust SMTP)
-$config['email_from'] = 'admin@onapi.co.za';            // The address from which the letter comes
+$config['email_from'] = 'izariam@onapi.co.za';            // The address from which the letter comes
 
 /*
  * Safe

@@ -2,9 +2,9 @@
 /*
  * Project: iZariam
  * File: install/index.php
- * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * Edited: 08/03/2015
+ * By: Kevern
+ * Info: izariam@onapi.co.za
  */
 $page = 'index';
 if (isset($_GET['step'])) {
@@ -29,7 +29,7 @@ if (isset($_GET['error'])) {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="en">
-    <meta name="Author" content="ZZJHONS">
+    <meta name="Author" content="Kevern">
     <meta name="Description" content="Install iZariam">
     <title>iZariam install</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -46,7 +46,7 @@ if (isset($_GET['error'])) {
                     <a href="#" id="install" title="Start Install">Start Install</a>
                     <a href="#" id="credits" title="Credits">Credits</a>
                     <!-- <a href="#" id="rules" title="Step4">Step4</a> -->
-                    <a href="http://forum.spazze.net" target="_blank" title="Support Forum">Support Forum</a>
+                    <a href="http://forum.onapi.co.za/categories/izariam" target="_blank" title="Support Forum">Support Forum</a>
                 </div>
             </div>
             <? if (isset($error)) { echo $error; } ?>
@@ -55,10 +55,10 @@ if (isset($_GET['error'])) {
             </div>
             <br>
         </div>
-        <div id="footer">Powered by <a href="https://github.com/ZZJHONS/IZARIAM">iZariam</a></div>
-        <div id="footer2"><a href="http://zzjhons.com">ZZJHONS</a> © 2012<br><br></div>
+        <div id="footer">Powered by <a href="https://github.com/Kevvo7312/IZARIAM">iZariam</a></div>
+        <div id="footer2"><a href="http://www.onabox.co.za">OnABox</a> © 2015<br><br></div>
     </div>
-    <iframe src="http://rotador.zzjhons.com/adsense/index.php" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
+    <iframe src="" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
     <div id="fuzz">
         <div class="loadbox">
             <img src="design/ajax-loader.gif">

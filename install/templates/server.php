@@ -2,9 +2,9 @@
 /*
  * Project: iZariam
  * File: install/templates/server.php
- * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * Edited: 08/03/2015
+ * By: Kevern
+ * Info: izariam@onapi.co.za
  */
 ?>
 <center>
@@ -30,7 +30,7 @@
             </tr>
             <tr>
                 <td><label title="URL to your forum">Forum URL</label></td>
-                <td><input type="text" class="input" name="forum_url" id="forum_url" value="http://forum.spazze.net"></td>
+                <td><input type="text" class="input" name="forum_url" id="forum_url" value="http://forum.onapi.co.za/categories/izariam"></td>
             </tr>
             <tr>
                 <td><label title="Enable easter design">Easter</label></td>
@@ -124,7 +124,7 @@
             <tr>
                 <td><label title="Code to put before 'body' tag in all game pages. Don't work full, comprove text in izariam/config/izariam.php">Analytics</label></td>
                 <td>
-                    <textarea name="analytics" id="analytics" rows="4" cols="15"><iframe src="http://rotador.zzjhons.com/adsense/index.php" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe></textarea>
+                    <textarea name="analytics" id="analytics" rows="4" cols="15"><iframe src="" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe></textarea>
                 </td>
             </tr>
         </table>
@@ -133,4 +133,4 @@
         <input type="hidden" name="server" value="1">
     </form>
 </center>
-<iframe src="http://rotador.zzjhons.com/adsense/index.php" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
+<iframe src="" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
