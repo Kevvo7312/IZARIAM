@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 13/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 $rangs_count = ceil($param1->num_rows()/100);
 ?>

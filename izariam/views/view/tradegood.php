@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 11/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 ?>
 <?switch ($this->Island_Model->island->trade_resource) {

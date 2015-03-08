@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 26/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 $levels = array();
 for ($i = 0; $i <= 14; $i++)

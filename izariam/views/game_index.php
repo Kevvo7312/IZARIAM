@@ -3,8 +3,8 @@
  * Project: iZariam
  * File: izariam/views/game_index.php
  * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -651,7 +651,7 @@
 				});
 			</script>
 			<div id="footer">
-				<span class="copyright">© <a id="gflink" target="_blank" href="http://izariam.onapi.co.za" class="">iZariam</a> 2012 by <a id="gflink" target="_blank" href="http://www.onabox.co.za" class="">OnABox</a><a href="<?=$this->config->item('base_url')?>game/credits/" style="margin:0px;" class="">.</a> All rights reserved.</span>
+				<span class="copyright">© <a id="gflink" target="_blank" href="http://izariam.onapi.co.za" class="">iZariam</a> 2015 by <a id="gflink" target="_blank" href="http://www.onabox.co.za" class="">OnABox</a><a href="<?=$this->config->item('base_url')?>game/credits/" style="margin:0px;" class="">.</a> All rights reserved.</span>
 				<a target="_blank" href="http://forum.onapi.co.za/categories/izariam" title="Development Forum" class="">Development Forum</a>
 				<a target="_blank" href="https://github.com/Kevvo7312/IZARIAM" title="GitHub repo" class="">GitHub repo</a>
 			</div>

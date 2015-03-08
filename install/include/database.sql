@@ -1,8 +1,8 @@
 /*
  * Project: iZariam
  * Edited: 06/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 
 SET FOREIGN_KEY_CHECKS=0;

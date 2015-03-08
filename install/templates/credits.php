@@ -3,14 +3,14 @@
  * Project: iZariam
  * File: install/templates/credits.php
  * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 ?>
 <center>
 	<h2>Developers</h2>
 	<br>
-	<span title="zzjhons@gmail.com"><strong>ZZJHONS</strong></span>
+	<span title="izariam@onapi.co.za"><strong>ZZJHONS</strong></span>
 	<br>
 	<b>Haku</b>
 	<br>

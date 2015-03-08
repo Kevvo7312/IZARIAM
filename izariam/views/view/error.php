@@ -10,7 +10,7 @@
                 <center>
                     <li><?=$this->lang->line('page_not_found')?></li>
                     <div class="centerButton">
-                        <a href="mailto:zzjhons@gmail.com?subject=iZariam-Error" class="button" style="text-decoration:none;">Report this error</a>
+                        <a href="mailto:izariam@onapi.co.za?subject=iZariam-Error" class="button" style="text-decoration:none;">Report this error</a>
                     </div>
                 </center>
             </ul>

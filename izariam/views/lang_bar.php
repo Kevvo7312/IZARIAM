@@ -3,8 +3,8 @@
  * Project: iZariam
  * File: izariam/views/lang_bar.php
  * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 $userdata = $this->session->userdata('language');
 $item = $this->config->item('language');

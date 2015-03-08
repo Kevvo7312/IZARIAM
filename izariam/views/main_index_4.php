@@ -3,8 +3,8 @@
  * Project: iZariam
  * File: izariam/views/main_index_4.php
  * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 ?>
 <!DOCTYPE HTML>

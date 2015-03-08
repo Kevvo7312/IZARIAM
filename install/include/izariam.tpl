@@ -3,8 +3,8 @@
  * Project: iZariam
  * File: izariam/config/izariam.php & install/include/izariam.php & install/include/izariam.tpl
  * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 /*
  * Game name

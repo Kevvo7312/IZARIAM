@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 31/01/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 ?>
 <style>

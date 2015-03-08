@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 12/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 $config['base_url'] = $this->config->item('base_url').'game/tradeAdvisor/';
 $config['total_rows'] = SizeOf($this->Player_Model->towns_messages);

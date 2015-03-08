@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 25/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 require_once "game.php";
 /**

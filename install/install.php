@@ -3,8 +3,8 @@
  * Project: iZariam
  * File: install/install.php
  * Edited: 08/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 if (file_exists('include/database.php') and file_exists('include/db.php') and isset($_POST['importdb'])) {
 	include 'database.php';

@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 13/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 ?>
 <script type="text/javascript" src="<?=$this->config->item('script_url')?>js/face.js"></script>
@@ -23,8 +23,8 @@
                 <th colspan="2">Ex-developers</th>
             </tr>
             <tr>
-            	<td class="pic"><a href="#" title="zzjhons@gmail.com"><img src="<?=$this->config->item('style_url')?>skin/characters/general.gif" style=""/></a></td>
-                <td title="zzjhons@gmail.com">ZZJHONS</td>
+            	<td class="pic"><a href="#" title="izariam@onapi.co.za"><img src="<?=$this->config->item('style_url')?>skin/characters/general.gif" style=""/></a></td>
+                <td title="izariam@onapi.co.za">ZZJHONS</td>
                 <td class="pic"><a href="#" title=""><img src="<?=$this->config->item('style_url')?>skin/characters/military/x60_y60/y60_phalanx_faceright.gif" /></a></td>
             	<td>Bibiki</td>
     			<td class="pic"><a href="#" title=""><img src="<?=$this->config->item('style_url')?>skin/characters/citizen1.gif" /></a></td>

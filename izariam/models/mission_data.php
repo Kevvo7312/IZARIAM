@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 12/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 // For now, take cargo ship data, and then will take the data from all ships
 $cost = $this->CI->Data_Model->army_cost_by_type(23, $this->Player_Model->research, $this->Player_Model->levels[$this->Player_Model->town_id]);

@@ -2,7 +2,7 @@
 /*
  * Project: iZariam
  * Edited: 07/03/2015 by Kevern
- * By: Kevern
+ * By: OnABox
  * Info: admin@onapi.co.za
  */
 

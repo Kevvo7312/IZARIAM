@@ -3,8 +3,8 @@
  * Project: iZariam
  * File: izariam/config/database.php & install/include/database.php & install/include/database.tpl
  * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 $active_group = "default";

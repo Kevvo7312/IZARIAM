@@ -3,7 +3,7 @@
  * Project: iZariam
  * File: izariam/controllers/main.php
  * Edited: 08/03/2015
- * By: Kevern
+ * By: OnABox
  * Info: izariam@onapi.co.za
  */
 class Main extends Controller {

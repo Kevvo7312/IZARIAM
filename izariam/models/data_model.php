@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 08/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 
 class Data_Model extends Model

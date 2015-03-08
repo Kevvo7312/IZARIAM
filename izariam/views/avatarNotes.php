@@ -2,8 +2,8 @@
 /*
  * Project: iZariam
  * Edited: 01/02/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 ?>
 <div class="yui-skin-sam" style="z-index: 9999999999; position: absolute;">

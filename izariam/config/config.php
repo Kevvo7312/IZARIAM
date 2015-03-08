@@ -3,8 +3,8 @@
  * Project: iZariam
  * File: izariam/config/config.php & install/include/config.php & install/include/config.tpl
  * Edited: 07/03/2012
- * By: ZZJHONS
- * Info: zzjhons@gmail.com
+ * By: OnABox
+ * Info: izariam@onapi.co.za
  */
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
